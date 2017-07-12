@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 // We need some glue between react and reudx. This component/container
 // needs to know about redux state. The answer? The connect method from
 // the react-redux module. The glue.
@@ -21,9 +21,9 @@ class ReduxStudents extends Component{
 	}
 
 	componentDidMount() {
-		setInterval(()=>{
-			this.props.timerAction();
-		},1000)
+		// setInterval(()=>{
+		// 	this.props.timerAction();
+		// },1000)
 	}
 
 
@@ -36,8 +36,7 @@ class ReduxStudents extends Component{
 			studentArray.push(
 				<li 
 					key={index} 
-					onClick={()=> {this.props.selectStudent(student)}}
-				>
+					onClick={()=> {this.props.selectStudent(student)}}>
 						{student}
 				</li>
 			)
@@ -49,7 +48,7 @@ class ReduxStudents extends Component{
 				<hr />
 				{this.props.selectedStudent} is selected.
 				<hr/>
-				{this.props.timer} is the apps current time.
+				{/*{this.props.timer} is the apps current time. */}
 			</div>
 		)
 	}
